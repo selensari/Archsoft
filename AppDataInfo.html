@@ -3,12 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Archsoft Web Sitesi</title>
+	<title>ArchSoft Web Sitesi</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/main.css">
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -17,7 +16,7 @@
 		<div class="container">
 			<a class="navbar-brand" href="#">
 				<img src="archsoft.png" width="150" height="150" class="d-inline-block align-top" alt="">
-				<p> Archsoft</p>
+				<p> ArchSoft</p>
 			</a>
 		</div>
 	</nav>
@@ -28,7 +27,7 @@
 				<img src="teamwork.jpg" class="img-fluid" alt="Takım çalışması">
 			</div>
 			<div class="col-md-6">
-				<p class="lead">Archsoft'a hoş geldiniz. Lütfen toplantı tarihini seçin:</p>
+				<p class="lead">AppData Toplantısına hoş geldiniz. Lütfen toplantı tarihini seçin:</p>
 				<div id="meeting-dates">
 					<label for="meetingDate">Tarih:</label>
 					<input type="date" id="meetingDate">
@@ -43,6 +42,36 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+		var selectedEvent = "AppData";
+		var votedDates = [];
+
+		document.getElementById("selected-event").innerHTML = "Seçilen Etkinlik: " + selectedEvent;
+
+		function submitMeetingDate() {
+			var selectedDate = document.getElementById("meetingDate").value;
+			var selectedTime = document.getElementById("meetingTime").value;
+			document.getElementById("selected-date").innerHTML = "Seçilen Tarih ve Saat: " + selectedDate + " " + selectedTime;
+		}
+
+		function voteForDate() {
+			var selectedDate = document.getElementById("meetingDate").value;
+			if (!selectedDate) {
+				alert("Lütfen önce bir tarih seçin.");
+				return;
+			}
+
+			if (votedDates.includes(selectedDate)) {
+				alert("Bu tarihe zaten oy verdiniz.");
+				return;
+			}
+
+			votedDates.push(selectedDate);
+
+			document.getElementById("voted-dates").innerHTML = "Oy Verilen Tarihler: " + votedDates.join(", ");
+		}
+	</script>
 </body>
 
 </html>

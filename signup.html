@@ -1,226 +1,145 @@
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Archsoft Web Sitesi</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .navbar {
-            background-color: #f0f0f0;
-        }
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/script.js"></script>
+  </head>
 
-        .navbar-brand {
-            font-weight: bold;
-            font-size: 24px;
-        }
-
-        .navbar-nav {
-            margin-left: auto;
-        }
-
-        .nav-item {
-            margin: 0 10px;
-        }
-
-        .nav-link {
-            color: #333;
-            font-weight: bold;
-        }
-
-        .nav-link:hover {
-            color: #555;
-        }
-
-        .btn {
-            border-radius: 20px;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-
-        .btn-outline-primary {
-            color: #007bff;
-            border-color: #007bff;
-        }
-
-        .btn-primary:hover {
-            background-color: #0069d9;
-            border-color: #0062cc;
-        }
-
-        .btn-outline-primary:hover {
-            color: #fff;
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-
-        .container {
-            margin-top: 50px;
-        }
-
-        .row {
-            align-items: center;
-        }
-
-        .col-md-6 {
-            text-align: center;
-        }
-
-        .img-fluid {
-            max-width: 80%;
-            height: auto;
-        }
-
-        .lead {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .text-muted {
-            font-size: 16px;
-        }
-
-        .form-group {
-            margin: 10px 0;
-        }
-
-        .form-control {
-            border-radius: 20px;
-        }
-
-        .form-check {
-            margin: 10px 0;
-        }
-
-        .form-check-input {
-            margin-left: -20px;
-        }
-
-        .form-check-label {
-            margin-left: 10px;
-        }
-    </style>
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <script>
-                    function redirectToIndex() {
-                        window.location.href = "index.html";
-                    }
-                </script>
-
-                <a href="#" onclick="redirectToIndex()"><img src="archsoft.png" width="150" height="150"
-                        class="d-inline-block align-top" alt="">
-                    <p>Archsoft</p>
-                </a>
-
-            </a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-
-                    <li class="nav-item">
-                        <script>
-                            function redirectToLogin() {
-                                window.location.href = "login.html";
-                            }
-                        </script>
-
-                        <a class="btn btn-outline-primary" href="#" onclick="redirectToLogin()">Log In</a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-primary" href="#">Sign Up</a>
-                    </li>
-                </ul>
-            </div>
+  <body>
+    <div class="form-wrapper sign-up">
+      <form action="">
+        <h2>Sign Up</h2>
+        <div class="input-group">
+          <input type="text" required />
+          <label for="">Username</label>
         </div>
+        <div class="input-group">
+          <input type="email" required />
+          <label for="">Email</label>
+        </div>
+        <div class="input-group">
+          <input type="password" required />
+          <label for="">Password</label>
+        </div>
+        <div class="remember">
+          <label
+            ><input type="checkbox" /> I agree to the terms & conditions</label
+          >
+        </div>
+        <button type="submit">Sign Up</button>
+        <div class="signUp-link">
+          <p>
+            <script>
+              function redirectToSignin() {
+                window.location.href = "index3.html";
+              }
+            </script>
+            Already have an account?
+            <a href="#" class="signInBtn-link" onclick="redirectToSignin()"
+              >Sign In</a
+            >
+          </p>
+        </div>
+      </form>
+    </div>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <script>
+            function redirectToIndex() {
+              window.location.href = "index.html";
+            }
+          </script>
+
+          <a href="#" onclick="redirectToIndex()"
+            ><img
+              src="archsoft.png"
+              width="150"
+              height="150"
+              class="d-inline-block align-top"
+              alt=""
+            />
+            <p>Archsoft</p>
+          </a>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <script>
+                function redirectToLogin() {
+                  window.location.href = "login.html";
+                }
+              </script>
+
+              <a
+                class="btn btn-outline-primary"
+                href="#"
+                onclick="redirectToLogin()"
+                >Log In</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary" href="#">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="teamwork.jpg" class="img-fluid" alt="Takım çalışması">
-            </div>
-            <div class="col-md-6">
-                <p class="lead">Archsoft'a kayıt olun ve takım çalışmasının keyfini çıkarın.</p>
-                <form onsubmit="event.preventDefault(); registerUser();">
-                    <div class="form-group">
-                        <label for="username">Kullanıcı Adı</label>
-                        <input type="text" class="form-control" id="username" placeholder="Kullanıcı adınızı girin">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-posta</label>
-                        <input type="email" class="form-control" id="email" placeholder="E-posta adresinizi girin">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Şifre</label>
-                        <input type="password" class="form-control" id="password" placeholder="Şifrenizi girin">
-                    </div>
-                    <div class="form-group">
-                        <label for="password-confirm">Şifre Tekrarı</label>
-                        <input type="password" class="form-control" id="confirmPassword"
-                            placeholder="Şifrenizi tekrar girin">
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="terms">
-                        <label class="form-check-label" for="terms">Kullanıcı sözleşmesini okudum ve kabul
-                            ediyorum.</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Kayıt Ol</button>
-                </form>
-            </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="teamwork.jpg" class="img-fluid" alt="Takım çalışması" />
         </div>
-    </div>
-    <script>
-        function registerUser() {
-            const username = document.getElementById("username").value;
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            const confirmPassword = document.getElementById("confirmPassword").value;
-
-            // Şifre tekrarı kontrolü
-            if (password !== confirmPassword) {
-                alert("Şifreler uyuşmuyor!");
-                return;
-            }
-
-            const registrationData = {
-                username: username,
-                email: email,
-                password: password
-            };
-
-            fetch("https://localhost:7069/api/Logins", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
-                },
-                body: JSON.stringify(registrationData)
-            })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP hata, durum: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log(data);
-                    alert("Kayıt başarılı!");
-                    // Kayıt başarılıysa yönlendirilecek sayfayı belirtin (örneğin, login.html)
-                    window.location.href = "login.html";
-                })
-                .catch(error => {
-                    console.error(error.message); // Hata mesajını konsola yazdırın
-                    alert("Kayıt başarısız!");
-                });
-        }
-    </script>
-</body>
-
-
+        <div class="col-md-6">
+          <p class="lead">
+            Archsoft'a kayıt olun ve takım çalışmasının keyfini çıkarın.
+          </p>
+          <form onsubmit="event.preventDefault(); registerUser();">
+            <div class="form-group">
+              <label for="username">Kullanıcı Adı</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                placeholder="Kullanıcı adınızı girin"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">E-posta</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="E-posta adresinizi girin"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Şifre</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Şifrenizi girin"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password-confirm">Şifre Tekrarı</label>
+              <input
+                type="password"
+                class="form-control"
+                id="confirmPassword"
+                placeholder="Şifrenizi tekrar girin"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+          </form>
+        </div>
+      </div>
+    </div> -->
+  </body>
 </html>

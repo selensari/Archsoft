@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Archsoft Web Sitesi</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/script.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="archsoft.png"
+            width="150"
+            height="150"
+            class="d-inline-block align-top"
+            alt=""
+          />
+          <p>Archsoft</p>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item" id="loginItem" style="display: none">
+              <script>
+                function redirectToLogin() {
+                  window.location.href = "login.html";
+                }
+              </script>
+              <a
+                class="btn btn-outline-primary"
+                href="#"
+                onclick="redirectToLogin()"
+                >Log In</a
+              >
+            </li>
+            <li class="nav-item" id="signupItem" style="display: none">
+              <script>
+                function redirectToSignup() {
+                  window.location.href = "signup.html";
+                }
+              </script>
+              <a class="btn btn-primary" href="#" onclick="redirectToSignup()"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="teamwork.jpg" class="img-fluid" alt="Takım çalışması" />
+        </div>
+        <div class="col-md-6">
+          <div class="box">
+            <span class="borderLine"></span>
+            <form>
+              <h2>Giriş Yap</h2>
+              <div class="inputBox">
+                <input type="text" required="required" />
+                <span>Kullanıcı Adı</span>
+                <i></i>
+              </div>
+              <div class="inputBox">
+                <input type="password" required="required" />
+                <span>Parola</span>
+                <i></i>
+              </div>
+              <div class="links">
+                <input type="submit" value="Login" />
+                <input type="submit" value="Kayıt ol" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showLoginSignup() {
+        document.getElementById("loginItem").style.display = "block";
+        document.getElementById("signupItem").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

@@ -4,93 +4,11 @@
     <meta charset="UTF-8">
     <title>Archsoft Web Sitesi</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .navbar {
-            background-color: #f0f0f0;
-        }
-
-        .navbar-brand {
-            font-weight: bold;
-            font-size: 24px;
-        }
-
-        .navbar-nav {
-            margin-left: auto;
-        }
-
-        .nav-item {
-            margin: 0 10px;
-        }
-
-        .nav-link {
-            color: #333;
-            font-weight: bold;
-        }
-
-        .nav-link:hover {
-            color: #555;
-        }
-
-        .btn {
-            border-radius: 20px;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-
-        .btn-outline-primary {
-            color: #007bff;
-            border-color: #007bff;
-        }
-
-        .btn-primary:hover {
-            background-color: #0069d9;
-            border-color: #0062cc;
-        }
-
-        .btn-outline-primary:hover {
-            color: #fff;
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-
-        .container {
-            margin-top: 50px;
-        }
-
-        .row {
-            align-items: center;
-        }
-
-        .col-md-6 {
-            text-align: center;
-        }
-
-        .img-fluid {
-            max-width: 80%;
-            height: auto;
-        }
-
-        .lead {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .text-muted {
-            font-size: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
-
-
-
-
-
-
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -100,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
 
-                    <li class="nav-item">
+                    <li class="nav-item" id="loginItem" style="display:none;">
                         <script>
                             function redirectToLogin() {
                                 window.location.href = "login.html";
@@ -110,7 +28,7 @@
                         <a class="btn btn-outline-primary" href="#" onclick="redirectToLogin()">Log In</a>
 
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="signupItem" style="display:none;">
                         <script>
                             function redirectToSignup() {
                                 window.location.href = "signup.html";
@@ -136,10 +54,17 @@
                     edebilir ve projelerinizi başarıyla tamamlayabilirsiniz. Takım üyelerinizin uygun olduğu zamanları
                     belirleyerek toplantılar planlayabilir, anketler oluşturabilir ve sonuçları görebilirsiniz ayrıca
                     takım çalışmasını daha eğlenceli ve etkili hale getirir.</p>
-                <a class="btn btn-primary" href="#">Şimdi Deneyin</a>
+                <a class="btn btn-primary" href="#" onclick="showLoginSignup()">Şimdi Deneyin</a>
             </div>
         </div>
     </div>
+
+    <script>
+        function showLoginSignup() {
+            document.getElementById("loginItem").style.display = "block";
+            document.getElementById("signupItem").style.display = "block";
+        }
+    </script>
 </body>
 
 </html>

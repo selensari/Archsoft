@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="./css/main.css">
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -43,6 +42,36 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+		var selectedEvent = "ArchSoft";
+		var votedDates = [];
+
+		document.getElementById("selected-event").innerHTML = "Seçilen Etkinlik: " + selectedEvent;
+
+		function submitMeetingDate() {
+			var selectedDate = document.getElementById("meetingDate").value;
+			var selectedTime = document.getElementById("meetingTime").value;
+			document.getElementById("selected-date").innerHTML = "Seçilen Tarih ve Saat: " + selectedDate + " " + selectedTime;
+		}
+
+		function voteForDate() {
+			var selectedDate = document.getElementById("meetingDate").value;
+			if (!selectedDate) {
+				alert("Lütfen önce bir tarih seçin.");
+				return;
+			}
+
+			if (votedDates.includes(selectedDate)) {
+				alert("Bu tarihe zaten oy verdiniz.");
+				return;
+			}
+
+			votedDates.push(selectedDate);
+
+			document.getElementById("voted-dates").innerHTML = "Oy Verilen Tarihler: " + votedDates.join(", ");
+		}
+	</script>
 </body>
 
 </html>

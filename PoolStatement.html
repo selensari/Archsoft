@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Pool Name</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="archsoft.png" width="150" height="150" class="d-inline-block align-top" alt="">
+				<p> Archsoft</p>
+			</a>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="teamwork.jpg" class="img-fluid" alt="Takım çalışması">
+			</div>
+			<div class="col-md-6">
+				<div id="eventSelectionContainer">
+					<h3>Etkinlik Seçimi:</h3>
+					<form id="eventSelectionForm">
+						<div class="form-group">
+							<label for="eventName">Etkinlik Adı:</label>
+							<select class="form-control" id="eventName">
+								<option value="AppData">AppData Toplantısı</option>
+								<option value="ArchSoft">ArchSoft Toplantısı</option>
+							</select>
+						</div>
+						<button type="button" class="btn btn-primary mt-3" onclick="showEventDescription()">Etkinlik
+							Açıklamasını Göster</button>
+					</form>
+				</div>
+
+				<!-- ArchSoft Bilgileri Form Grubu -->
+				<div class="form-group" id="archSoftInfo" style="display: none;">
+					<h3>ArchSoft Bilgileri</h3>
+					<p><strong>Takım Hakkında:</strong><br>Archsoft, takım çalışması için geliştirilmiş bir web
+						uygulamasıdır. Archsoft ile takım üyelerinizle kolayca iletişim kurabilir, görevleri
+						paylaşabilir, takvimleri senkronize edebilir ve projelerinizi başarıyla tamamlayabilirsiniz.
+						Takım üyelerinizin uygun olduğu zamanları belirleyerek toplantılar planlayabilir, anketler
+						oluşturabilir ve sonuçları görebilirsiniz. Ayrıca, takım çalışmasını daha eğlenceli ve etkili
+						hale getirir.</p>
+					<button type="button" class="btn btn-primary mt-3" onclick="goToSelectedEvent('ArchSoft')">Etkinliği
+						Seç</button>
+				</div>
+
+				<!-- AppData Bilgileri Form Grubu -->
+				<div class="form-group" id="appDataInfo" style="display: none;">
+					<h3>AppData Bilgileri</h3>
+					<p><strong>Takım Hakkında:</strong><br>AppData, Doğuş Üniversitesi'nde kurulan bir takımdır ve
+						yazılım işleriyle ilgilenmektedir. Güncel projemiz olan DogusApp, okulumuzun mobil
+						uygulamasıdır.</p>
+					<p><strong>Genel Bakış:</strong></p>
+					<ul>
+						<li><strong>Proje Adı:</strong> DogusApp</li>
+						<li><strong>Açıklama:</strong> Okulumuzun mobil uygulaması</li>
+						<li><strong>Konumu:</strong> Doğuş Üniversitesi</li>
+					</ul>
+					<button type="button" class="btn btn-primary mt-3" onclick="goToSelectedEvent('AppData')">Etkinliği
+						Seç</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
