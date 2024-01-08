@@ -1,0 +1,113 @@
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Archsoft Web Sitesi</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		.navbar {
+			background-color: #f0f0f0;
+		}
+
+		.navbar-brand {
+			font-weight: bold;
+			font-size: 24px;
+		}
+
+		.container {
+			margin-top: 50px;
+		}
+
+		.row {
+			align-items: center;
+		}
+
+		.col-md-6 {
+			text-align: center;
+		}
+
+		.img-fluid {
+			max-width: 80%;
+			height: auto;
+		}
+
+		.lead {
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		.text-muted {
+			font-size: 16px;
+		}
+
+		#meeting-dates {
+			margin-top: 30px;
+		}
+
+		#meeting-dates label {
+			margin-right: 10px;
+		}
+
+		#selected-date {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="archsoft.png" width="150" height="150" class="d-inline-block align-top" alt="">
+				<p> Archsoft</p>
+			</a>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="teamwork.jpg" class="img-fluid" alt="Takım çalışması">
+			</div>
+			<div class="col-md-6">
+				<p class="lead">Archsoft'a hoş geldiniz. Lütfen toplantı tarihini seçin:</p>
+				<div id="meeting-dates">
+					<label>Toplantı Tarihleri:</label>
+					<select id="meeting-date" class="form-control">
+						<option value="2023-12-10">10 Aralık 2023</option>
+						<option value="2023-12-15">15 Aralık 2023</option>
+						<option value="2023-12-20">20 Aralık 2023</option>
+						<option value="2023-12-10">25 Aralık 2023</option>
+						<option value="2023-12-15">30 Aralık 2023</option>
+						<option value="2023-12-20">5 Ocak 2024</option>
+					</select>
+				</div>
+				<button type="button" class="btn btn-primary mt-3" onclick="submitMeetingDate()">Toplantı Tarihini
+					Seç</button>
+				<div id="selected-date" class="mt-3"></div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function submitMeetingDate() {
+			var selectedDate = document.getElementById("meeting-date").value;
+			document.getElementById("selected-date").innerHTML = "Seçilen Tarih: " + selectedDate;
+		}
+	</script>
+</body>
+
+</html>

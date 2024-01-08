@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Archsoft Web Sitesi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            background-color: #f0f0f0;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .nav-item {
+            margin: 0 10px;
+        }
+
+        .nav-link {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            color: #555;
+        }
+
+        .btn {
+            border-radius: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-outline-primary {
+            color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+
+        .btn-outline-primary:hover {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .row {
+            align-items: center;
+        }
+
+        .col-md-6 {
+            text-align: center;
+        }
+
+        .img-fluid {
+            max-width: 80%;
+            height: auto;
+        }
+
+        .lead {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .text-muted {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="archsoft.png" width="150" height="150" class="d-inline-block align-top" alt="">
+                <p> Archsoft</p>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <script>
+                            function redirectToLogin() {
+                                window.location.href = "login.html";
+                            }
+                        </script>
+
+                        <a class="btn btn-outline-primary" href="#" onclick="redirectToLogin()">Log In</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <script>
+                            function redirectToSignup() {
+                                window.location.href = "signup.html";
+                            }
+                        </script>
+
+                        <a class="btn btn-primary" href="#" onclick="redirectToSignup()">Sign Up</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="teamwork.jpg" class="img-fluid" alt="Takım çalışması">
+            </div>
+            <div class="col-md-6">
+                <p class="lead">Takım çalışması ile projelerinizi daha kolay ve verimli bir şekilde yönetin.</p>
+                <p class="text-muted">Archsoft, takım çalışması için geliştirilmiş bir web uygulamasıdır. Archsoft ile
+                    takım üyelerinizle kolayca iletişim kurabilir, görevleri paylaşabilir, takvimleri senkronize
+                    edebilir ve projelerinizi başarıyla tamamlayabilirsiniz. Takım üyelerinizin uygun olduğu zamanları
+                    belirleyerek toplantılar planlayabilir, anketler oluşturabilir ve sonuçları görebilirsiniz ayrıca
+                    takım çalışmasını daha eğlenceli ve etkili hale getirir.</p>
+                <a class="btn btn-primary" href="#">Şimdi Deneyin</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
